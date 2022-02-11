@@ -61,16 +61,16 @@ function game() {
         playerSelection = playerSelection.toLowerCase();
         computerSelection = computerPlay();
         result = playRound(playerSelection, computerSelection);
-        if (result == "You Win!") {
-            console.log("You have won this round");
-            playerScore = playerScore + 1; //playerScore += 1;
-        } else if (result == "You Lose!") {
-            console.log("You have lost this round");
-            computerScore = computerScore + 1; //computerScore +=1;
-        } else {
-            console.log("Draw! Score stays: \n" + playerScore + " - " + computerScore);
-        }
-        console.log(playerScore + " - " + computerScore);
+            if (result == "You Win!") {
+                console.log("You have won this round");
+                playerScore = playerScore + 1; //playerScore += 1;
+            } else if (result == "You Lose!") {
+                console.log("You have lost this round");
+                computerScore = computerScore + 1; //computerScore +=1;
+            } else {
+                console.log("Draw! Score stays: \n" + playerScore + " - " + computerScore);
+            }
+            console.log(playerScore + " - " + computerScore);
     }
     if (playerScore > computerScore) {
         console.log("You have won! \nFinal score is: " + playerScore + " - " + computerScore);
