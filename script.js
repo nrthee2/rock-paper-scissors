@@ -47,39 +47,6 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
-//5 rounds game, keep score, report winner or loser at the end
-
-function game() {
-
-    let playerScore = 0;
-    let computerScore = 0;
-    let result = "";
+//buttons play games
 
 
-    for (let i = 0; i < 5; i++) {
-        playerSelection = prompt("This is roshambo. Round: " + (i+1) + ".\nPlease, make your pick: ", "");
-        playerSelection = playerSelection.toLowerCase();
-        computerSelection = computerPlay();
-        result = playRound(playerSelection, computerSelection);
-            if (result == "You Win!") {
-                console.log("You have won this round");
-                playerScore = playerScore + 1; //playerScore += 1;
-            } else if (result == "You Lose!") {
-                console.log("You have lost this round");
-                computerScore = computerScore + 1; //computerScore +=1;
-            } else {
-                console.log("Draw! Score stays: \n" + playerScore + " - " + computerScore);
-            }
-            console.log(playerScore + " - " + computerScore);
-    }
-    if (playerScore > computerScore) {
-        console.log("You have won! \nFinal score is: " + playerScore + " - " + computerScore);
-    } else if (playerScore < computerScore) {
-        console.log("You have lost! \nFinal score is: " + playerScore + " - " + computerScore);
-    } else {
-        console.log("It's a Draw! \nFinal score: " + playerScore + " - " + computerScore);
-    }
-    
-}
-
-console.log(game());
