@@ -3,13 +3,22 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    color: white;
 }
 
 .text{
     text-align: center;
 }
 
-
 button{
     padding: 10px;
+    background-color: orange;
+    color: black;
+    border-radius: 10px;
+}
+
+.buttons{
+    display: flex;
+    gap: 10px;
 }
